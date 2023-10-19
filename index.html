@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Altelier</title>
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '',
+                        'secondary': '',
+                        'text': '#d1d5db'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+
+
+<body>
+
+    <div class="flex justify-between item-center px-10 md:px-20 lg:px-40 py-5 bg-black/90 text-white">
+        <div>
+            <p class="text-2xl font-bold">The Altelier</p>
+        </div>
+        <div class="flex justify-center items-center gap-5">
+            <!-- <div>
+                Cart Items: <span class="bg-red-300">2</span>
+            </div> -->
+            <div class="text-lg font-semibold">
+                Cart Total: <span id="cart-total-header">$0.00</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-12 gap-y-10 lg:gap-10 p-10">
+        <div class="col-span-12  lg:col-span-8 products p-10 bg-gray-100">
+            <h2 class="text-3xl font-bold mb-10">Products</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-5 sm:gap-5" id="product-list">
+
+            </div>
+        </div>
+        <div class="cart col-span-12 lg:col-span-4">
+            <div class="bg-gray-100 p-10">
+                <h2 class="text-3xl font-bold mb-10">Cart</h2>
+                <ul id="cart-items">
+                </ul>
+                <hr class="h-0.5 my-5 bg-gray-400" />
+                <div class="flex justify-between item-center">
+                    <p class="text-xl font-semibold">Total:</p>
+                    <p id="cart-total" class="text-xl font-semibold">$0.00</p>
+                </div>
+
+                <div class="flex my-5">
+                    <button class="bg-black w-full text-white px-4 py-2 rounded-md">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-center item-center px-10 md:px-20 lg:px-40 py-5 bg-black/90 text-white">
+        &copy; copyright 2023. The Altelier
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
